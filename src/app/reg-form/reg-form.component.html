@@ -1,1 +1,43 @@
-<p>reg-form works!</p>
+ 
+ <div class="main">
+
+    <h3 class="regis">Register your account</h3>
+    <div class="container">
+        <div class="col-md-4">
+            <form [formGroup]="RegisterForm" (ngSubmit)="subRegisterForm()">
+              <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"> Name</label>
+                  <input type="text" class="form-control" placeholder="Enter your Full name"  formControlName="uname"   name="uname"  > 
+                  <span style="color: red;" *ngIf="uname.touched && uname.invalid">Enter Valid Name</span>
+               </div> 
+               <div class="mb-3">
+                   <label  class="form-label">UserName</label>
+                   <input type="text" class="form-control"placeholder="Enter a user name"  formControlName="username"   name="username"  > 
+                  <span style="color: red;" *ngIf="username.touched && username.invalid">Enter Valid UserName</span> 
+               </div>
+               <div class="mb-3">
+                   <label for="exampleInputEmail1" class="form-label">Emailaddress</label>
+                   <input type="email" placeholder="Enter your Emailaddress " class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email"   name="email" > 
+                  <span style="color: red;" *ngIf="email.touched && email.invalid">Enter Emailaddress </span>  
+               </div>
+               <div class="mb-3">
+                   <label for="exampleInputPassword1" class="form-label">Password</label>
+                   <input type="password" placeholder="Enter your password" class="form-control" id="exampleInputPassword1" formControlName="password"   name="password">
+                  <span style="color: red;" *ngIf="password.touched && password.invalid">Enter valid password </span>  
+
+               </div>
+               <div class="mb-3">
+                   <label for="exampleInputPassword1" class="form-label">ConfirmPassword</label>
+                   <input type="password" placeholder="Enter your password again" (input)="comparaPass()" class="form-control" id="exampleInputPassword1"formControlName="Confirmpassword"   name="Confirmpassword" > 
+                   <span style="color: red;" *ngIf="flag">password not match</span>
+               </div> 
+               <div class="d-grid gap-2 col-12 mx-auto">
+                   <button [disabled]="RegisterForm.invalid" class="btn btn-primary" type="submit">Sign Up</button> 
+                 </div>
+               <p class="para" >Already have an account? <span><a href="./login" class="anc">Sign in</a></span></p>
+           </form>
+       </div>
+   </div>
+</div>
+
+
