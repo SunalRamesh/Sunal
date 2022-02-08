@@ -18,7 +18,7 @@
           <span style="color:red" *ngIf="logpass.invalid && logpass.touched"> *Invalid password </span>
         </div>
 
-        <button type="submit" class="btn btn-success">Sign in</button>
+        <button type="submit" [disabled]="loginForm.invalid"  class="btn btn-success">Sign in</button>
       </div>
     </div>
     <div class="newUser">
