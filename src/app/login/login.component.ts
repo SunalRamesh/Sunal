@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
       if (use) {
         alert("login successfully")
         this.loginForm.reset()
-        this.route.navigate(["employee"])
+        this.route.navigate(["addEmployee"])
       } else {
         alert("something get wrong")
       }
