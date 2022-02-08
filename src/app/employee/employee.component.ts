@@ -7,7 +7,6 @@ import { ServiceService } from '../services/service.service';
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent implements OnInit {
-
   constructor(private usedhere :ServiceService ) { }
    
   delete( r:any){
@@ -19,5 +18,4 @@ export class EmployeeComponent implements OnInit {
   this.result=val
       })
     }
-
 }

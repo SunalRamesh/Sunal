@@ -5,6 +5,7 @@ import { EmployeeComponent } from './employee/employee.component';
 import { LoginComponent } from './login/login.component';
 import { RegFormComponent } from './reg-form/reg-form.component';
 
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path:"register",component:RegFormComponent},

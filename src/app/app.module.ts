@@ -4,10 +4,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegFormComponent } from './reg-form/reg-form.component';
 import { LoginComponent } from './login/login.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
 import { AddemployeeComponent } from './addemployee/addemployee.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeeComponent } from './employee/employee.component';
+
 @NgModule({
   declarations: [
     AppComponent,

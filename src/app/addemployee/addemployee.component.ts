@@ -1,7 +1,9 @@
+
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-addemployee',
@@ -41,6 +43,8 @@ export class AddemployeeComponent implements OnInit {
     })
   }
   constructor(private route:Router,private serve:HttpClient) { }
+
+ 
 
   ngOnInit(): void {
   }
