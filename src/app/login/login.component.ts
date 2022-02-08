@@ -28,19 +28,19 @@ export class LoginComponent implements OnInit {
 
   login() {
     console.log(this.loginForm.value);
-    this.search.get(" http://localhost:3000/posts").subscribe(val => {
-      const use = val.find((a:any) => {
-        a.email == this.loginForm.value.logemail && a.password == this.loginForm.value.logpass
-      })
-      if (use) {
-        alert("login successfully")
-        this.loginForm.reset()
-        this.route.navigate(["addEmployee"])
-      } else {
-        alert("something get wrong")
-      }
-    })
-
+//     this.search.get(" http://localhost:3000/posts").subscribe(val => {
+//       const use = val.find((a:any) => {
+//         a.email == this.loginForm.value.logemail && a.password == this.loginForm.value.logpass
+//       })
+//       if (use) {
+//         alert("login successfully")
+//         this.loginForm.reset()
+//         this.route.navigate(["addEmployee"])
+//       } else {
+//         alert("something get wrong")
+//       }
+//     }) 
+    this.route.navigate(["addEmployee"])
   }
 
 
