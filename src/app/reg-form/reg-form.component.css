@@ -1,0 +1,38 @@
+.main{ 
+    margin-left: 400px;
+    margin-right: 400px;
+    padding: 20px;
+    /* background-color: #1877F2; */
+    background-color: #2851A3;
+}
+h3{
+    margin-left: 85px;
+    padding-bottom: 20px;
+    color: white;
+    font-size: 30px;
+}
+button:disabled{
+    background-color: green;
+}
+form{  
+   padding: 20px;
+   margin-top: 13px; width: 380px;
+   margin-left: 35px;
+   border-radius: 5px;
+   background-color: white; 
+   margin-bottom: 30px;
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+button{
+    background-color: none;
+    margin-bottom:20px ;
+    background-color: green;
+}
+button.disabled{
+    background-color: green;
+}
+.para{
+    text-align: center;
+}

@@ -1,0 +1,29 @@
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+.emphead{
+    background-color: rgb(246, 244, 244);
+     margin-left: 0px;
+     margin-right: 0px;
+     height: 50px;
+}
+.emphead h3{
+    margin-left: 20px;
+    font-size: 25px;
+}
+button{
+    margin-bottom: 20px;
+    margin-left: 320px;
+    padding-top: 10px;
+}
+.main{
+    border: 2px solid lightgray; 
+    width: 430px;
+    position: absolute;
+    margin-left: 500px;
+    margin-top: 30px;
+    border-radius:5px;
+} 
+form{
+    width: 400px;
+}
