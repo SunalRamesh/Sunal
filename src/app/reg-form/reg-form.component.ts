@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup,FormControl,Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-reg-form',
   templateUrl: './reg-form.component.html',
@@ -8,13 +9,13 @@ import { FormGroup,FormControl,Validators } from '@angular/forms';
 })
 export class RegFormComponent implements OnInit {
 
-  constructor(private route:Router) { }
+  constructor(private route:Router,private user:HttpClient) { }
 
   RegisterForm=new FormGroup({
-    uname:new FormControl("",[Validators.required]),
+    uname:new FormControl("",[Validators.required,Validators.pattern(/^[a-z][a-z '-.,]{0,31}$|^$/)]),
     username:new FormControl("",[Validators.required,Validators.pattern("^[a-zA-Z0-9]([._-](?![._-])|[a-zA-Z0-9]){3,18}[a-zA-Z0-9]$")]),
     email:new FormControl("",[Validators.required]),
-    password:new FormControl("",[Validators.required ]),
+    password:new FormControl("",[Validators.required  ]),
     Confirmpassword:new FormControl("",[Validators.required])
     // ,Validators.pattern("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})")
   })
@@ -35,7 +36,8 @@ export class RegFormComponent implements OnInit {
   }
   subRegisterForm(){
     // console.log( this.RegisterForm.value);
-    this.RegisterForm.value.post("./",this.RegisterForm.value).subscribe((res)=>{
+    this .user.post("http://localhost:3000/posts",this.RegisterForm.value)
+    .subscribe((res)=>{
       alert("Registered succesfully")
       this.RegisterForm.reset()
       this.route.navigate(["login"]) 

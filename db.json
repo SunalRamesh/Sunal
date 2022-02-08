@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "uname": "srinivas cr",
+      "username": "srinivas99",
+      "email": "srinivascr99@gmail.com",
+      "password": "srinivas",
+      "Confirmpassword": "srinivas",
+      "id": 1
+    }
+  ],
+  "comments": [
+    {
+      "fullname": "srinivas c r",
+      "Designation": "dev",
+      "Salary": 222222,
+      "Age": 22,
+      "id": 1
+    },
+    {
+      "fullname": "swathi ",
+      "Designation": "dev",
+      "Salary": 212122,
+      "Age": 21,
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

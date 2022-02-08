@@ -11,7 +11,7 @@ h3{
     color: white;
     font-size: 30px;
 }
-button.ng-invalid{
+button:disabled{
     background-color: green;
 }
 form{  

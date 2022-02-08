@@ -32,15 +32,15 @@ export class AddemployeeComponent implements OnInit {
   //send the form to the server
   addEmp(){
     console.log(  this.addEmployee.value);
-    this.addEmployee.value.post(".///",this.addEmployee.value).subscribe((val)=>{
-      alert("Employee details added successfully")
+    this.serve.post("http://localhost:3000/comments",this.addEmployee.value).subscribe((val)=>{
       this.addEmployee.reset()
-      this.route.navigate(["Employee"])
+      alert("Employee details added successfully")
+      this.route.navigate(["employee"])
     },err=>{
       alert("something gets wrong")
     })
   }
-  constructor(private route:Router) { }
+  constructor(private route:Router,private serve:HttpClient) { }
 
   ngOnInit(): void {
   }
